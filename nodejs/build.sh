@@ -1,7 +1,7 @@
 # confirm docker daemon is running and connected
 docker version
 
-# build the image based on the Dockerfile and name it `nvm`
+# build the image based on the Dockerfile and name it
 docker build -t xy/nodejs .
 
 # confirm image is present
