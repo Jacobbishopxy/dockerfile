@@ -6,14 +6,14 @@ FROM nodejs
 # create work directory
 WORKDIR /app
 
+# copy source code to workdir
+ADD ./ /app
+
 # copy package.json to workdir
 ADD ./yarn.lock /app
 
 # install packages
 RUN yarn
-
-# copy source code to workdir
-ADD ./ /app
 
 # execute npm start
 CMD yarn build && yarn start
