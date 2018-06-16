@@ -7,9 +7,11 @@
 
 ### Usage
 
+    $ $env:COMPOSE_CONVERT_WINDOWS_PATHS=1
+
     $ docker-compose pull
 
-    $ docker-compose up
+    $ docker-compose up -d
 
     $ open http://localhost:3000
 
