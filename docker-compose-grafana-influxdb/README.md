@@ -15,14 +15,25 @@
 
     $ open http://localhost:3000
 
+### Install Gragana plugins
+
+```bash
+$ docker exec -it demo_grafana_1 bash
+
+$ grafana-cli plugins install petrslavotinek-carpetplot-panel
+```
+
+
 ### FAQ
 
 #### [InfluxDB] How do I check running InfluxDB's version?
 
 ```bash
-$ docker exec -it demo_influxdb_1                                             \
-    influx                                                                    \
-      -version
+$ docker exec -it demo_influxdb_1  influx  -version
+```
+
+```bash
+docker logs -f test_influxdb_1
 ```
 
 #### [Grafana] Why is InfluxDB datasource doesn't work?
@@ -30,16 +41,16 @@ $ docker exec -it demo_influxdb_1                                             \
 manual create database is still required
 
 ```bash
-$ docker exec -it demo_influxdb_1                                             \
-    influx                                                                    \
-      -username root                                                          \
-      -password 5up3rS3cr3t                                                   \
+$ docker exec -it demo_influxdb_1
+    influx
+      -username admin
+      -password admin
       -execute 'CREATE DATABASE demo;'
 
-$ docker exec -it demo_influxdb_1                                             \
-    influx                                                                    \
-      -username root                                                          \
-      -password 5up3rS3cr3t                                                   \
+$ docker exec -it demo_influxdb_1
+    influx
+      -username admin
+      -password admin
       -execute 'SHOW DATABASES;'
 ```
 

@@ -1,14 +1,15 @@
-version: "2.4"
+version: "3.6"
 
 services:
     influxdb:
         image: influxdb
+        container_name: ${CONTAINER_1}
         volumes:
             - ./influxdb/var/lib:/var/lib/influxdb
             - ./influxdb/etc:/etc/influxdb
         environment:
-            - INFLUXDB_ADMIN_USER=admin
-            - INFLUXDB_ADMIN_PASSWORD=admin
+            - INFLUXDB_ADMIN_USER=${INFLUX_ADMIN_USERNAME}
+            - INFLUXDB_ADMIN_PASSWORD=${INFLUX_ADMIN_PASSWORD}
         ports:
             - 8083:8083
             - 8086:8086
@@ -16,6 +17,7 @@ services:
 
     grafana:
         image: grafana/grafana
+        container_name: ${CONTAINER_2}
         volumes:
             - ./grafana/etc:/etc/grafana
             - ./grafana/var/lib:/var/lib/grafana
@@ -24,10 +26,11 @@ services:
             - ./grafana/var/log:/var/log/grafana
         links:
             - influxdb:influxdb
-        environment:
-            - GF_INSTALL_PLUGINS=grafana-clock-panel
         ports:
             - 3030:3000
         depends_on:
             - influxdb
         privileged: true
+
+
+
