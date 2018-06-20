@@ -54,6 +54,13 @@ $ docker exec -it demo_influxdb_1
       -execute 'SHOW DATABASES;'
 ```
 
+### Create user and grant roles
+
+```bash
+influx -username admin -password admin
+# CREATE USER "reader" WITH PASSWORD 'reader'
+# GRANT [READ, WRITE, ALL] ON test TO "reader"
+```
 
 ### Docker Images
 
@@ -62,3 +69,24 @@ $ docker exec -it demo_influxdb_1
 
 [docker-image-influxdb]: https://hub.docker.com/_/influxdb/
 [docker-image-grafana]: https://hub.docker.com/r/grafana/grafana/
+
+
+### Note
+
+* Checking file size
+    
+    ```
+    ls -l filename /* Size of the file*/
+    ls -l *        /* Size of All the files in the current directory */
+    ls -al *       /* Size of All the files including hidden files in the current directory */
+    ls -al dir/    /* Size of All the files including hidden files in the 'dir' directory */
+    ```
+
+* Checking directory sizes
+
+    ```
+    du -sh directory_name    /* Gives you the summarized(-s) size of the directory in human readable(-h) format*/
+    du -bsh *                /* Gives you the apparent(-b) summarized(-s) size of all the files and directories in the current directory in human readable(-h) format*/
+    ```
+
+
