@@ -1,22 +1,19 @@
 # Author: Jacob Bishop
 
 # base
-FROM nodejs
+FROM node
+
+# mkdir
+RUN mkdir /app
+
+# copy source code to workdir
+COPY ./ /app
 
 # create work directory
 WORKDIR /app
 
-# copy source code to workdir
-ADD ./ /app
-
-# copy package.json to workdir
-ADD ./yarn.lock /app
-
-# install packages
-RUN yarn
-
-# execute npm start
-CMD yarn build && yarn start
-
 # expose server 3000 to host
 EXPOSE 3000
+
+# install packages
+RUN yarn install && yarn build

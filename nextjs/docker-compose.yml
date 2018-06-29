@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  node:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: rng
+    command: yarn start
+
+    ports:
+      - "3010:3010"

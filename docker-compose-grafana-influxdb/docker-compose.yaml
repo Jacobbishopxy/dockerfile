@@ -11,7 +11,6 @@ services:
             - INFLUXDB_ADMIN_USER=${INFLUX_ADMIN_USERNAME}
             - INFLUXDB_ADMIN_PASSWORD=${INFLUX_ADMIN_PASSWORD}
         ports:
-            - 8083:8083
             - 8086:8086
         privileged: true
 
