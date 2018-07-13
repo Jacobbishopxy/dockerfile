@@ -1,7 +1,7 @@
 # Author: Jacob Bishop
 
 # base
-FROM xy/nodejs
+FROM nodejs
 
 # create work directory
 WORKDIR /app
