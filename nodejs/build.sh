@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # confirm docker daemon is running and connected
 docker version
 

@@ -1,0 +1,9 @@
+*.db
+*.log
+**/sessions/
+grafana/var/lib/plugins
+data/var/lib/data/*
+data/var/lib/meta
+data/var/lib/wal
+
+.idea

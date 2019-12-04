@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+  pg-prod:
+    restart: always
+    container_name: pg-prod
+    image: postgres:11.0
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_PASSWORD=qweqwe123
+      - TZ=Asia/Shanghai
+      - PGTZ=Asia/Shanghai
+    volumes:
+      - ./data:/var/lib/postgresql/data:z
+      - /etc/localtime:/etc/localtime:ro
+

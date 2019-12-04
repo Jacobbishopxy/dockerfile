@@ -5,7 +5,7 @@ services:
         image: influxdb
         container_name: ${CONTAINER_1}
         volumes:
-#            - ./influxdb/var/lib:/var/lib/influxdb
+            - ./influxdb/var/lib:/var/lib/influxdb
             - ./influxdb/etc:/etc/influxdb
         environment:
             - INFLUXDB_ADMIN_USER=${INFLUX_ADMIN_USERNAME}
@@ -18,7 +18,7 @@ services:
         image: grafana/grafana
         container_name: ${CONTAINER_2}
         volumes:
-#            - ./grafana/etc:/etc/grafana
+            - ./grafana/etc:/etc/grafana
             - ./grafana/var/lib:/var/lib/grafana
         links:
             - influxdb:influxdb
