@@ -1,0 +1,19 @@
+version: "3.6"
+
+services:
+    influxdb:
+        image: influxdb:1.5
+        container_name: ${CONTAINER}
+        volumes:
+            - ./influxdb/var/lib:/var/lib/influxdb
+            - ./influxdb/etc:/etc/influxdb
+        environment:
+            - INFLUXDB_ADMIN_USER=${INFLUX_ADMIN_USERNAME}
+            - INFLUXDB_ADMIN_PASSWORD=${INFLUX_ADMIN_PASSWORD}
+        ports:
+            - 8086:8086
+        privileged: true
+
+
+
+
