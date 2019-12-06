@@ -1,19 +1,22 @@
 version: '3.6'
 
 services:
-    grafana:
-        restart: always
-        container_name: ${CONTAINER}
-        image: ${IMAGE}
-        volumes:
-            - ./data/etc:/etc/grafana:z
-            - ./data/var/lib:/var/lib/grafana:z
-            - ./data/var/log:/var/log/grafana:z
-            - /etc/localtime:/etc/localtime:ro
-        ports:
-            - 2000:3000
-        user: "0"
-        privileged: true
+  grafana:
+    restart: always
+    container_name: ${CONTAINER}
+    image: ${IMAGE}
+    volumes:
+      - ./data/etc:/etc/grafana:z
+      - ./data/var/lib:/var/lib/grafana:z
+      - ./data/var/log:/var/log/grafana:z
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 2000:3000
+    user: "0"
+    privileged: true
 
-
+networks:
+  default:
+    external:
+      name: prod
 
