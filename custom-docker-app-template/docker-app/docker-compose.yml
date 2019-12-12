@@ -1,0 +1,18 @@
+version: '3.6'
+
+services:
+  ngr:
+    restart: always
+    image: ${APP_IMAGE_NAME}:${APP_IMAGE_VERSION}
+    container_name: ${CONTAINER_NAME}
+    ports:
+      - ${APP_PORT}:3000
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    command: yarn start
+
+
+networks:
+  default:
+    external:
+      name: prod
