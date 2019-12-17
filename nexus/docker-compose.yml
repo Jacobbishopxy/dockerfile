@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+  nexus3:
+    restart: always
+    container_name: nexus3
+    image: sonatype/nexus3:3.8.0
+    ports:
+      - "8071:8081"
+      - "8092:8092"
+      - "8093:8093"
+      - "8094:8094"
+    volumes:
+      - ./data:/nexus-data
+
+networks:
+  default:
+    external:
+      name: prod
+
