@@ -3,7 +3,7 @@ version: '3.6'
 services:
   pg-prod:
     restart: always
-    container_name: pg-prod
+    container_name: pg
     image: postgres:11.0
     ports:
       - 5433:5432
