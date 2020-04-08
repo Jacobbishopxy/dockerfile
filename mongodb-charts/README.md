@@ -1,6 +1,6 @@
 # MongoDB Charts
 
-Detailed information please visit official [instruction](https://docs.mongodb.com/charts/current/installation/).
+For detailed information please visit official [instruction](https://docs.mongodb.com/charts/current/installation/).
 
 ## Setup Process
 
@@ -8,11 +8,14 @@ Detailed information please visit official [instruction](https://docs.mongodb.co
 
 1. pull docker images by [`setup-image.sh`](setup-image.sh)
 
-2. test connection by [`test-connection.sh`](test-connection.sh)
+1. enable docker swarm mode by [`docker-swarm-init.sh`](docker-swarm-init.sh)
 
-3. create docker container by [`create-container.sh`](create-container.sh)
+1. test connection by [`test-connection.sh`](test-connection.sh)
 
-4. create charts users by [`create-charts-users.sh`](create-charts-users.sh)
+1. create docker container by [`create-container.sh`](create-container.sh)
 
-5. backup charts installation keys by [`backup-keys.sh`](backup-keys.sh)
+1. create charts users by [`create-charts-users.sh`](create-charts-users.sh)
+
+1. backup charts installation keys by [`backup-keys.sh`](backup-keys.sh)
+
 

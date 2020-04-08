@@ -8,8 +8,8 @@ services:
       # host:container port mapping. If you want MongoDB Charts to be
       # reachable on a different port on the docker host, change this
       # to <port>:80, e.g. 8888:80.
-      - 80:80
-      - 443:443
+      - 2004:80
+      - 4430:443
     volumes:
       - keys:/mongodb-charts/volumes/keys
       - logs:/mongodb-charts/volumes/logs
