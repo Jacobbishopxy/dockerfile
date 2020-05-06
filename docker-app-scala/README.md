@@ -1,4 +1,4 @@
-# Docker APP Template Scala
+# Docker APP Scala
 
 ## Structure
 

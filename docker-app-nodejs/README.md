@@ -1,4 +1,4 @@
-# Docker APP Template NodeJs
+# Docker APP NodeJs
 
 本案例意为使用配置文件，参数化的构建多层docker image，并启动docker container。
 
