@@ -1,0 +1,23 @@
+version: '3.6'
+
+services:
+  seg:
+    image: ${APP_IMAGE_NAME}:${APP_IMAGE_VERSION}
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${VOLUME_LOG}:/data/logs
+      - ${VOLUME_CONF}:${VOLUME_CONF}:ro
+    ports:
+      - ${APP_PORT}:8080
+    command:
+      java -Xmx8g -cp ${VOLUME_CONF}:${SRC}:${LIB} ${SERVER}
+
+    # command: tail -f /dev/null
+
+
+networks:
+  default:
+    external:
+      name: prod

@@ -1,0 +1,17 @@
+.dockerignore
+.git
+.gitignore
+.idea
+*.log
+*.ipr
+*.iws
+
+# scala project
+null
+project/*
+target/
+build/
+
+!project/build.properties
+!project/Dependencies.scala
+!project/plugins.sbt
