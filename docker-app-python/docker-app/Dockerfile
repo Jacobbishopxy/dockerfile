@@ -1,0 +1,8 @@
+# Author: Jacob Bishop
+
+ARG     DEPS_IMAGE_NAME
+ARG     DEPS_IMAGE_VERSION
+
+FROM    $DEPS_IMAGE_NAME:$DEPS_IMAGE_VERSION
+COPY    . /app
+WORKDIR /app

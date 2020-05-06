@@ -1,0 +1,20 @@
+version: '3.3'
+
+services:
+  pda:
+    restart: always
+    image: ${APP_IMAGE_NAME}:${APP_IMAGE_VERSION}
+    container_name: ${CONTAINER_NAME}
+    ports:
+      - ${APP_PORT}:5000
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - CONFPATH=${CONFPATH}
+    command: python app.py
+
+
+networks:
+  default:
+    external:
+      name: prod

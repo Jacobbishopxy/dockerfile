@@ -1,0 +1,8 @@
+.dockerignore
+.git
+.gitignore
+.idea
+build
+dist
+
+test
