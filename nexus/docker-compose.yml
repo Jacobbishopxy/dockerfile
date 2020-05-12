@@ -5,7 +5,7 @@ services:
     container_name: nexus3
     image: sonatype/nexus3:3.8.0
     ports:
-      - "8071:8081"
+      - "8091:8081"
       - "8092:8092"
       - "8093:8093"
       - "8094:8094"

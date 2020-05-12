@@ -28,7 +28,7 @@ A collection of docker files I used in my daily routine.
 
 1. `@deprecated("use official image")` nodejs
 
-1. [pgadmin4](pgadmin4/)
+1. [pgadmin4](pgadmin4/README.md)
 
 1. [postgresql](postgresql/README.md)
 

@@ -6,10 +6,10 @@
 
 ## pipy
 
-- 临时访问：`pip install -i http://localhost:8081/repository/pypi/simple some-package --trusted-host localhost` 
+- 临时访问：`pip install -i http://localhost:8091/repository/pypi/simple some-package --trusted-host localhost` 
 
-- 设置默认pip请求：`pip config set global.index-url http://localhost:8071/repository/pypi/simple`
+- 设置默认pip请求：`pip config set global.index-url http://localhost:8091/repository/pypi/simple`
 
 - 设置默认服务器验证：`pip config set install.trusted-host localhost`
 
-
+- 或者直接使用[pip.conf](pip.conf)文件
