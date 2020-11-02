@@ -8,4 +8,4 @@ export APP_IMAGE_VERSION=${APP_IMAGE_VERSION}
 export CONTAINER_NAME=${CONTAINER_NAME}
 export APP_PORT=${APP_PORT}
 docker-compose down
-docker-compose -p ${COMPOSE_PROJECT_NAME} up -d
+docker-compose -p "${COMPOSE_PROJECT_NAME}" up -d

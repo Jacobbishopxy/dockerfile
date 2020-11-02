@@ -2,4 +2,4 @@
 # author: Jacob Bishop
 
 source ../resources/docker.env
-docker restart ${CONTAINER_NAME}
+docker restart "${CONTAINER_NAME}"
