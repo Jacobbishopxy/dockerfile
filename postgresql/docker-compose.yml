@@ -3,12 +3,12 @@ version: '3.6'
 services:
   pgdb:
     restart: always
-    container_name: pgdb
-    image: postgres:10.0
+    container_name: ${CONTAINER_NAME}
+    image: postgres:${VERSION}
     ports:
-      - 5433:5432
+      - ${PORT}:5432
     environment:
-      - POSTGRES_PASSWORD=qweqwe123
+      - POSTGRES_PASSWORD=${PASSWORD}
       - TZ=Asia/Shanghai
       - PGTZ=Asia/Shanghai
     volumes:
@@ -18,5 +18,5 @@ services:
 networks:
   default:
     external:
-      name: prod
+      name: ${NETWORK_NAME}
 

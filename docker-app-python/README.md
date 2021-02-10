@@ -2,6 +2,10 @@
 
 ## Process
 
+1. docker-python
+
+    - `setup.sh`: pulling latest version of anaconda and tag it 
+
 1. docker-base
 
     - `setup.sh`: setting up conda environment
