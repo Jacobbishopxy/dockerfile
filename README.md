@@ -14,13 +14,15 @@ A collection of docker files I used in my daily routine.
 
 1. [indluxdb](influxdb/README.md)
 
-1. java8
+1. [java8](java8/)
 
 1. [mongodb](mongodb/README.md)
 
 1. [mongodb-charts](mongodb-charts/README.md)
 
 1. [mongodb-express](mongodb-express/README.md)
+
+1. [mysql](mysql/)
 
 1. [nexus](nexus/README.md)
 
@@ -31,4 +33,3 @@ A collection of docker files I used in my daily routine.
 1. [pgadmin4](pgadmin4/README.md)
 
 1. [postgresql](postgresql/README.md)
-
