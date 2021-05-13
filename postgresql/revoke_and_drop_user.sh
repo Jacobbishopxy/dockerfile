@@ -25,6 +25,7 @@ do
     docker exec -i pgdb psql -U postgres << EOF
 REVOKE ALL ON DATABASE $i FROM $username;
 EOF
+done
 
 if [ -z $password ];
 then
@@ -41,4 +42,3 @@ EOF
 fi
 
 
-done
