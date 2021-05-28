@@ -27,6 +27,7 @@ REVOKE ALL ON DATABASE $i FROM $username;
 EOF
 done
 
+done
 if [ -z $password ];
 then
     password='infore'
