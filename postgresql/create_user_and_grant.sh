@@ -23,12 +23,12 @@ if [ -z $password ];
 then
     password='infore'
     docker exec -i pgdb psql -U postgres << EOF
-CREATE USER $username PASSWORD '''$password''';
+CREATE USER $username WITH PASSWORD '''$password''';
 EOF
     echo "create $username with default password $password"
 else
     docker exec -i pgdb psql -U postgres << EOF
-CREATE USER $username PASSWORD '''$password''';
+CREATE USER $username with PASSWORD '''$password''';
 EOF
 
 fi
