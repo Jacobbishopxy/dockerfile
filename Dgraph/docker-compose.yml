@@ -3,6 +3,12 @@ version: "3.6"
 #WARNING: if using the latest version on ratel, it would require zero and alpha are also latest versions
 #currently manually set the version of alpha and zero to latest:v21.03.0, but if Dgraph releases
 #new version in the future there may be a problem using ratel
+
+# This Docker Compose file can be used to quickly bootup Dgraph Zero
+# Alpha, and Ratel in different Docker containers.
+
+# It mounts ./data on the host machine to /dgraph within the
+# container. Change RATELPORT for mapping different port from the host
 services:
   zero:
     image: dgraph/dgraph:${VERSION}
