@@ -1,0 +1,39 @@
+version: "3.6"
+
+#WARNING: if using the latest version on ratel, it would require zero and alpha are also latest versions
+#currently manually set the version of alpha and zero to latest:v21.03.0, but if Dgraph releases
+#new version in the future there may be a problem using ratel
+services:
+  zero:
+    image: dgraph/dgraph:${VERSION}
+    container_name: ${CONTAINER_ZERO_NAME}
+    volumes:
+      - ./data:/dgraph
+    ports:
+      - ${PORTZEROFIVE}:5080
+      - ${PORTZEROSIX}:6080
+    restart: always
+    command: dgraph zero --my=zero:5080
+  alpha:
+    container_name: ${CONTAINER_ALPHA_NAME}
+    image: dgraph/dgraph:${VERSION}
+    volumes:
+      - ./data:/dgraph
+    ports:
+      - ${PORTALPHAEIGHT}:8080
+      - ${PORTALPHANINE}:9080
+    restart: always
+    command: dgraph alpha --my=alpha:7080 --zero=zero:5080
+
+  ratel:
+    image: dgraph/dgraph:${RATELVERSION}
+    container_name: ${CONTAINER_RATEL_NAME}
+    restart: always
+    ports:
+      - ${PORTRATEL}:8000
+    command: dgraph-ratel
+
+networks:
+  default:
+    external:
+      name: ${NETWORK_NAME}
