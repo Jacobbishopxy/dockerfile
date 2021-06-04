@@ -4,6 +4,8 @@ A collection of docker files I used in my daily routine.
 
 ## Category
 
+1. [dgraph](dgraph/README.md)
+
 1. [docker-app-nodejs](docker-app-nodejs/README.md)
 
 1. [docker-app-python](docker-app-python/README.md)
@@ -27,8 +29,6 @@ A collection of docker files I used in my daily routine.
 1. [nexus](nexus/README.md)
 
 1. [nginx](nginx/README.md)
-
-1. `@deprecated("use official image")` nodejs
 
 1. [pgadmin4](pgadmin4/README.md)
 
