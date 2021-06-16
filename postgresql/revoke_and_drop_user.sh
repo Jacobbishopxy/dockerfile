@@ -10,6 +10,11 @@ if [ $numArg -ne 2 ];
 then
     echo -n "Please enter the username to drop: "
     read username
+    if [ -z $username ];
+    then
+        echo "username can't be empty, exiting..."
+        exit 1
+    fi
     if [ $numArg -lt 2 ];
     then 
         echo -n "Please enter the password for $username: "
