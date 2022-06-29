@@ -1,7 +1,0 @@
-*.log
-
-.idea
-
-data/conf.d/*
-!data/conf.d/default.conf
-!data/conf.d/grafana.conf

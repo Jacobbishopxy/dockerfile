@@ -3,11 +3,14 @@ services:
   nginx:
     restart: always
     container_name: nginx-prod
-    image: nginx:1.17.6
+    image: xy/nginx:0.0.0
     ports:
       - "80:80"
     volumes:
-      - ./data:/etc/nginx
+      - ./conf:/etc/nginx
+      - ./cron:/etc
+      - ./logrotate:/etc/logrotate.d
+    command: service cron start && nginx -g 'daemon off;'
 
 networks:
   default:
