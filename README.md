@@ -36,6 +36,8 @@ A collection of docker files I used in my daily routine.
 
 1. [sea-tunnel](sea-tunnel/README.md)
 
+1. [spark](spark/README.md)
+
 ## Docker installation
 
 1. follow [official manual](https://docs.docker.com/engine/install/ubuntu)
